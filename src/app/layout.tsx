@@ -22,7 +22,12 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   keywords: ["nextjs", "nextjs14", "next14", "pwa", "next-pwa"],
   themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#fff" }],
-  authors: [{ name: "A M" }],
+  authors: [
+    { name: "A M" },
+    {
+      name: "A M",
+    },
+  ],
   viewport:
     "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   icons: [
