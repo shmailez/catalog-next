@@ -7,6 +7,9 @@ export default function Header() {
   return (
     <>
       <header>
+        {session?.data && (
+          <p className="hellodolly">Привет {session?.data?.user?.name}!</p>
+        )}
         <nav>
           <Link href={"/"}>Home</Link>
           <Link href={"/catalog"}>Catalog</Link>
