@@ -66,6 +66,9 @@ article pre{
   width: 90%;
   margin: 32px auto;
   font-size: 24px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
 }
 
 article span{
