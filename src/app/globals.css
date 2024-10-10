@@ -3,12 +3,12 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 html,
 body {
@@ -31,10 +31,19 @@ body {
 }
 
 header {
-  height: 40px;
+  height: 98px;
+  background-color: rgb(1, 83, 86);
+  color: #e0e0e0;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hellodolly {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 12px;
 }
 
 header a{
@@ -54,7 +63,30 @@ form {
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 0 auto;
+  margin: 40px auto;
+}
+
+form input {
+  background-color: rgb(1, 83, 86);
+  padding: 12px 0;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+form textarea {
+  background-color: rgb(1, 83, 86);
+  padding: 12px 0;
+  margin: 12px 0;
+  border: none;
+  border-radius: 8px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
 }
 
 article {
@@ -65,14 +97,74 @@ article {
 article pre{
   width: 90%;
   margin: 32px auto;
-  font-size: 24px;
+  font-size: 16px;
   white-space: pre-wrap;
-  word-wrap: break-word;
+  word-wrap:unset;
   text-align: justify;
 }
 
 article span{
   margin: 42px;
+}
+
+.googlebutton {
+  background-color: rgb(1, 83, 86);
+  font-size: large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+}
+
+.goBack {
+  position: relative;
+  background-color: #8a8989;
+  color: #ffffff;
+  padding: 6px 20px 6px 6px;
+  margin-left: 40px;
+}
+
+.goBack span{
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  transform: translate(-50%,-50%);
+  width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-right: 40px solid  #8a8989;;
+	border-bottom: 20px solid transparent;
+}
+
+
+.articleList {
+  width: 90%;
+  margin: 40px auto 0 auto;
+  list-style-type: none;
+}
+
+.articleItem {
+  list-style-type:  none;
+  margin: 28px 8px;
+}
+
+.itemBody{
+  position: relative;
+  margin-left: 8px;
+  margin-top: 8px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.itembodyHide {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(255,255,255,1) 25%, rgba(255,255,255, 0.2) 100%);
 }
 
 @media (prefers-color-scheme: dark) {

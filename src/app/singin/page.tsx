@@ -5,7 +5,6 @@ export default function Singin() {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <h1>Sing in</h1>
         <GoogleButton />
       </Suspense>
     </>

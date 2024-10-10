@@ -10,7 +10,8 @@ export default async function CatalogItem({ params }: { params: Params }) {
   const article = await getCatalogItem(id);
   return (
     <>
-      <Link className="goBack" href={`/catalog/`}>
+      <Link className="goBack" href={`/`}>
+        <span></span>
         Вернуться к статьям
       </Link>
       <article>
