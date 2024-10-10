@@ -12,7 +12,6 @@ export default function Header() {
         )}
         <nav>
           <Link href={"/"}>Home</Link>
-          {/* <Link href={"/catalog"}>Catalog</Link> */}
           {session?.data && <Link href={"/extention"}>Extention</Link>}
           {session?.data ? (
             <Link href="#" onClick={() => signOut({ callbackUrl: "/" })}>

@@ -16,16 +16,8 @@ export default async function CatalogItem({ params }: { params: Params }) {
         Вернуться к статьям
       </Link>
       <article>
-        <pre>
-          <code></code>
-        </pre>
-        <code></code>
-
         <h1>{article.title}</h1>
-
         <pre>{article.body}</pre>
-
-        <span>автор: {article.userName}</span>
         <DeleteArticleButton article={article} />
       </article>
     </>

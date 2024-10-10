@@ -124,7 +124,7 @@ article span{
   position: relative;
   background-color: #8a8989;
   color: #ffffff;
-  padding: 6px 20px 6px 6px;
+  padding: 4px 20px 4px 6px;
   margin-left: 40px;
 }
 
@@ -170,10 +170,18 @@ article span{
 
 .deleteArticleButton {
   color: #ffffff;
+  background-color: #015356;
   padding:  8px 20px;
   margin-top: 20px;
   border: none;
   border-radius: 8px;
+}
+
+.spinnersvg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 @media (prefers-color-scheme: dark) {

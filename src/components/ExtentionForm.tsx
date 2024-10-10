@@ -22,14 +22,9 @@ export default function ExtentionForm() {
       },
       body: JSON.stringify({ id, title, body, userName, userEmail }),
     });
-
-    // const response = await addItemToList(formData);
-
-    // Handle response if necessary
     if (response.ok) {
       let data = await response.json();
     }
-    // ...
   }
 
   return (

@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 
 export default function DeleteArticleButton({ article }: any) {
   const session = useSession();
-  const enable = session?.data?.user?.name === article.userName;
+  const enable = session?.data?.user?.email === article.userEmail;
   const id = article.id;
 
   async function deleteArticle(id: any) {
