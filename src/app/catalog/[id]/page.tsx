@@ -1,3 +1,4 @@
+import DeleteArticleButton from "@/components/DeleteArticleButton";
 import { getCatalogItem } from "@/services/catalogService";
 import Link from "next/link";
 
@@ -25,6 +26,7 @@ export default async function CatalogItem({ params }: { params: Params }) {
         <pre>{article.body}</pre>
 
         <span>автор: {article.userName}</span>
+        <DeleteArticleButton article={article} />
       </article>
     </>
   );
