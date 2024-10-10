@@ -41,9 +41,18 @@ header {
 
 .hellodolly {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 12px;
+  top: 70px;
+  right: 10px;
+  font-size: 8px;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  right: 12px;
+  top: 32px;
 }
 
 header a{
