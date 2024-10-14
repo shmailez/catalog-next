@@ -1,11 +1,16 @@
+
+// https://api.jsonserve.com/2ZhyD9
+
 export const getCatalogData = async () => {
       const responce = await fetch(
         "https://175591125d7a11b5.mokky.dev/catalog", { cache: 'no-store' }
+        // "https://api.jsonserve.com/2ZhyD9", { cache: 'no-store' }
+        
         // {
         //   next: { revalidate: 5 },
         // }
       );
-    
+
       return responce.json();
     }
 

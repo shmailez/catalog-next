@@ -149,16 +149,28 @@ article span{
 	border-bottom: 20px solid transparent;
 }
 
-
 .articleList {
-  width: 90%;
-  margin: 40px auto 0 auto;
+  margin: 0 auto;
   list-style-type: none;
 }
 
 .articleItem {
   list-style-type:  none;
-  margin: 28px 8px;
+  margin: 28px auto;
+  padding: 0 28px;
+}
+
+.articleItem:nth-child(even){
+  padding: 28px;
+  background-color: rgb(237, 237, 237);
+}
+
+.articleItem:nth-child(even) .itembodyHide{
+  background: linear-gradient(0deg, rgb(237, 237, 237) 25%, rgba(237, 237, 237, 0.2) 100%);
+}
+
+.articleLink {
+  margin: 40px auto 0 auto;
 }
 
 .itemBody{

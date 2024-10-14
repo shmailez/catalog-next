@@ -13,7 +13,7 @@ export default async function CatalogList() {
       <ul className="articleList">
         {post.map((x: any) => (
           <li className="articleItem" key={x.id}>
-            <Link href={`/catalog/${x.id}`}>
+            <Link className="articleLink" href={`/catalog/${x.id}`}>
               <h1 className="itemTitle">{x.title}</h1>
 
               <p className="itemBody">
