@@ -1,6 +1,6 @@
 export const getCatalogData = async () => {
       const responce = await fetch(
-        "https://175591125d7a11b5.mokky.dev/catalog"
+        "https://175591125d7a11b5.mokky.dev/catalog", { cache: 'no-store' }
         // {
         //   next: { revalidate: 5 },
         // }
