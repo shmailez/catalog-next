@@ -1,19 +1,35 @@
 
 // https://api.jsonserve.com/2ZhyD9
 
-export const getCatalogData = async () => {
+export const getCatalogDataMokky = async () => {
       const responce = await fetch(
         "https://175591125d7a11b5.mokky.dev/catalog", { cache: 'no-store' }
-        // "https://api.jsonserve.com/2ZhyD9", { cache: 'no-store' }
-        
-        // {
-        //   next: { revalidate: 5 },
-        // }
       );
 
       return responce.json();
     }
 
+export const getCatalogDataJsonserve = async () => {
+    const responce = await fetch(
+        "https://api.jsonserve.com/2ZhyD9", { cache: 'no-store' }
+    );
+
+    return responce.json();
+    }    
+
+export const getCatalogBoth = async (first: any, second: any) => {
+    let resoult = Promise.all([first(), second()]).then()
+    return resoult
+}
+
+
+export const getCatalogFirst = async (first: any, second: any) => {
+    let resoult = Promise.race([first(), second()]).then()
+    return resoult
+}
+
+
+    //   Promise.all([getCatalogData(), getCatalogDataNext()])
 
 export const getCatalogItem = async (id: any) => {
     try {
