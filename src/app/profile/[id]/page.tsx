@@ -11,7 +11,6 @@ export default async function CatalogItem({ params }: { params: Params }) {
   const article = await getCatalogItem(id);
   const arr = article.body.split("\n");
   arr.sort(() => Math.random() - 0.5);
-  // console.log(array);
 
   return (
     <>

@@ -1,3 +1,4 @@
+import CatalogItemer from "@/components/CatalogItem";
 import DeleteArticleButton from "@/components/DeleteArticleButton";
 import { getCatalogItem } from "@/services/catalogService";
 import Link from "next/link";
@@ -16,8 +17,7 @@ export default async function CatalogItem({ params }: { params: Params }) {
         Вернуться к статьям
       </Link>
       <article>
-        <h1>{article.title}</h1>
-        <pre>{article.body}</pre>
+        <CatalogItemer article={article} />
         <DeleteArticleButton article={article} />
       </article>
     </>
