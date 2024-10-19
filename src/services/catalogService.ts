@@ -24,7 +24,7 @@ export const getCatalogBoth = async (first: any, second: any) => {
 
 
 export const getCatalogFirst = async (first: any, second: any) => {
-    let resoult = Promise.race([first(), second()]).then()
+    let resoult = Promise.any([first(), second()]).then()
     return resoult
 }
 

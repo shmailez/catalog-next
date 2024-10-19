@@ -116,6 +116,15 @@ article span{
   margin: 42px;
 }
 
+article ul{
+  list-style-type: none;
+}
+
+article ul li{
+  margin: 20px;
+  font-size: 24px;
+}
+
 .googlebutton {
   background-color: rgb(1, 83, 86);
   color: #ffffff;

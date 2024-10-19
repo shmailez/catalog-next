@@ -9,11 +9,10 @@ interface Params {
 export default async function CatalogItem({ params }: { params: Params }) {
   const { id } = params;
   const article = await getCatalogItem(id);
-  // const newStr = article.body.replace(/\n/g, "</li><li>");
-  // const newStr = article.body;
-  // newStr.innerHTML = newStr.innerHTML.replace(/\n/g, "</li><li>");
-  // console.log(article.body);
-  // console.log(newStr);
+  const arr = article.body.split("\n");
+  arr.sort(() => Math.random() - 0.5);
+  // console.log(array);
+
   return (
     <>
       <Link className="goBack" href={`/profile`}>
@@ -22,12 +21,11 @@ export default async function CatalogItem({ params }: { params: Params }) {
       </Link>
       <article>
         <h1>{article.title}</h1>
-        <p>{article.body}</p>
-        {/* <ul>
-          <li>
-            <code>{newStr}</code>
-          </li>
-        </ul> */}
+        <ul>
+          {arr.map((x: any) => (
+            <li key={x}>{x}</li>
+          ))}
+        </ul>
 
         <DeleteArticleButton article={article} />
       </article>

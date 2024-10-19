@@ -11,15 +11,16 @@ export const metadata = {
 };
 
 export default async function CatalogList() {
-  // const post = await getCatalogDataMokky();
+  const post = await getCatalogDataJsonserve();
   // const allsrc = await getCatalogBoth(
   //   getCatalogDataMokky,
   //   getCatalogDataJsonserve
   // );
   const firstsrc = await getCatalogFirst(
-    getCatalogDataMokky,
-    getCatalogDataJsonserve
+    getCatalogDataJsonserve,
+    getCatalogDataMokky
   );
+  console.log(firstsrc);
 
   // console.log("allsr", allsrc[0]);
 
