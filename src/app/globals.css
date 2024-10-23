@@ -229,8 +229,13 @@ article ul li{
 
 .popup {
   background-color: rgba(196, 196, 196, 0.647);
-  height: 30%;
-  width: 50%;
+  height: 40%;
+  width: 80%;
+}
+
+.popupButtonSet {
+  display: flex;
+  justify-content: space-between;
 }
 
 .popup button{
@@ -242,6 +247,14 @@ article ul li{
   border-radius: 8px;
 }
 
+.popup h3{
+  text-align: center;
+  margin-top: 12px;
+}
+
+.popup h2{
+  text-align: center;
+}
 
 @media (prefers-color-scheme: dark) {
   html {

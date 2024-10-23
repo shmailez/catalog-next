@@ -34,16 +34,25 @@ export default function ProfileArticleList({ article }: any) {
         popUpId.map((x: any, i: any) => (
           <div key={i} className="popupWrapper">
             <div className="popup">
-              <button onClick={() => handlerVisiblePopup(i)}>close</button>
-              <button onClick={() => handlerVisibleForm(i)}>form</button>
-              <span>{x.text}</span>
+              <div className="popupButtonSet">
+                {" "}
+                <button
+                  onClick={() => {
+                    handlerVisiblePopup(i), setVisibleForm(false);
+                  }}
+                >
+                  close
+                </button>
+                <button onClick={() => handlerVisibleForm(itemId)}>form</button>
+              </div>
+              <h3>{x.text}</h3>
               {visibleForm ? (
                 <form action="">
                   <input type="text" />
                   <input type="submit" value="submit" />
                 </form>
               ) : (
-                <h2>Hello{i}</h2>
+                <h2>Hello{itemId}</h2>
               )}
             </div>
           </div>
