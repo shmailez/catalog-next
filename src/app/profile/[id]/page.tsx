@@ -1,4 +1,5 @@
 import DeleteArticleButton from "@/components/DeleteArticleButton";
+import ProfileArticleList from "@/components/ProfileArticleList";
 import { getCatalogItem } from "@/services/catalogService";
 import Link from "next/link";
 
@@ -10,7 +11,9 @@ export default async function CatalogItem({ params }: { params: Params }) {
   const { id } = params;
   const article = await getCatalogItem(id);
   const arr = article.body.split("\n");
-  arr.sort(() => Math.random() - 0.5);
+  let arrObj = arr.map((x: any) => {
+    return { text: x, info: [] };
+  });
 
   return (
     <>
@@ -20,11 +23,7 @@ export default async function CatalogItem({ params }: { params: Params }) {
       </Link>
       <article>
         <h1>{article.title}</h1>
-        <ul>
-          {arr.map((x: any) => (
-            <li key={x}>{x}</li>
-          ))}
-        </ul>
+        <ProfileArticleList article={arrObj} />
 
         <DeleteArticleButton article={article} />
       </article>
