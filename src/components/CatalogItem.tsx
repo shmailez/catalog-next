@@ -1,18 +1,40 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function CatalogItemer({ article }: any) {
-  const articleSeriatim = article.body.split("\n");
+  console.log(typeof article.body === "string");
+  // const articleSeriatim = article.body.split("\n");
+  // const articleRandomise = article.body.split("\n");
+  // articleRandomise.sort(() => Math.random() - 0.5);
 
-  const articleRandomise = article.body.split("\n");
-  articleRandomise.sort(() => Math.random() - 0.5);
+  let articleSeriatim: [] = [];
+  let articleRandomise: [] = [];
+
+  const inside = function () {
+    if (typeof article.body === "string") {
+      articleSeriatim = article.body.split("\n");
+      console.log("if");
+      articleRandomise = article.body.split("\n");
+      articleRandomise.sort(() => Math.random() - 0.5);
+    }
+  };
+
+  inside();
+
+  // useEffect(() => {
+  //   inside();
+  // }, []);
 
   let [toggle, setToggle] = useState(true);
 
   const toggler = () => {
     setToggle((toggle = !toggle));
   };
+
+  // useEffect(() => {
+  //   inside();
+  // }, [toggler]);
 
   return (
     <>
