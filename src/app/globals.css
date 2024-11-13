@@ -161,12 +161,14 @@ article ul li{
 .articleList {
   margin: 0 auto;
   list-style-type: none;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .articleItem {
   list-style-type:  none;
-  margin: 28px auto;
-  padding: 0 28px;
+  /* margin: 28px auto; */
+  padding: 28px;
 }
 
 .articleItem:nth-child(even){
