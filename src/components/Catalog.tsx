@@ -1,8 +1,9 @@
 import {
   getCatalogBoth,
   getCatalogDataMokky,
-  getCatalogDataJsonserve,
+  
   getCatalogFirst,
+  getCatalogItem,
 } from "@/services/catalogService";
 import Link from "next/link";
 
@@ -11,19 +12,20 @@ export const metadata = {
 };
 
 export default async function CatalogList() {
-  const post = await getCatalogDataJsonserve();
+  // const post = await getCatalogDataJsonserve();
   // const allsrc = await getCatalogBoth(
   //   getCatalogDataMokky,
   //   getCatalogDataJsonserve
   // );
   ///why firstscr not work
   const firstsrc = await getCatalogFirst(
-    getCatalogDataJsonserve,
+    getCatalogDataMokky,
     getCatalogDataMokky
   );
   console.log(firstsrc);
 
   const secondsrc = await getCatalogDataMokky();
+  // const secsrc = await getCatalogItem();
 
   // console.log("allsr", allsrc[0]);
 
